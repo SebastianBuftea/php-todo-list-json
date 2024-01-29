@@ -18,8 +18,15 @@ createApp({
             })
         },
         addToDo() {
-            this.todoList.push(this.todoItem)
-            this.todoItem = ''
+            const data = {
+                todoItem: this.todoItem
+            }
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todoItem = '';
+                this.todoList = response.data;
+            })
         }
     }
 }).mount("#app")
