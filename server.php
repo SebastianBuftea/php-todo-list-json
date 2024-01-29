@@ -12,6 +12,13 @@ if(isset($_POST['todoItem'])){
     file_put_contents('todo-list.json', json_encode($todo_list));
 }
 
+if(isset($_POST['todoDeleted'])){
+    $todoDeleted=$_POST['todoDeleted'];
+    array_splice($todo_list, $todoDeleted, 1);
+
+    file_put_contents('todo-list.json', json_encode($todo_list));
+}
+
 //passo un dato json al header di risposta
 header('content-type: application/json');
 

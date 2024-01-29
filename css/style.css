@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Caveat', cursive;
+    padding: 20px;
+    background-color: rgb(255, 205, 125);
+}
+
+.color_list {
+    background-color: rgb(191, 187, 126);
+    border: 2px outset rgb(0, 0, 0);
+
+}
